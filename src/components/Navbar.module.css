@@ -1,0 +1,202 @@
+/* NAV */
+.cont_nav{
+    width: 80%;
+    height: 70px;
+    border: 1px solid black;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hamb_btn{
+    display: none;
+}
+
+.hamb_btn2{
+    display: none;
+}
+
+/* -----Logo SitioWeb----- */
+.logo{
+    height: 100%;
+}
+
+/* -----Links----- */
+.cont_ul{
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.cont_li{
+    width: 120px;
+    height: 80%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.link{
+    width: 100%;
+    height: 100%;
+    color: var(--color-text-primary);
+    font-size: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 2px; 
+}
+
+/* Effecto linea abajo */
+.link::after {
+    content: "";
+    position: absolute;
+    top: 40px;
+    width: 70%;
+    height: 1px; /* Grosor de la línea */
+    background-color: var(--color-text-primary); /* Color de la línea */
+    transform: scaleX(0); /* Hace que la línea sea invisible al principio */
+    transition: transform 0.3s ease;
+}
+
+.link:hover::after {
+    transform: scaleX(1); /* Expande la línea en hover */
+}
+
+/* -----Iconos----- */
+.cont_icons{
+    display: flex;
+    gap: 25px;
+}
+
+
+/* ------------------------------------------------------------------------------------ */
+
+@media screen and (max-width: 1500px) {
+    .cont_nav{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .cont_nav{
+        width: 100%;
+        justify-content: space-between;
+        padding: 0px 20px;
+    }
+
+
+    .cont_ul.hide  {
+        width: 0;
+        height: 100%;
+        border: 1px solid rgb(187, 187, 187);
+
+        position: absolute;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        background-color: white;
+        display: block ;
+        transition: width 0.8s;
+    }
+
+    .cont_ul.show  {
+        width: 70%;
+        height: 100%;
+        border: 1px solid rgb(187, 187, 187);
+
+        position: absolute;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        background-color: white;
+        display: block ;
+        transition: width 0.8s;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 0;
+    }
+
+    .hamb_btn2{
+        display: block;
+        padding: 10px;
+        overflow: hidden;
+    }
+
+    .hamb_btn2.hide{
+        width: 0px;
+        overflow: hidden;
+    }
+
+    .cont_li{
+        position: relative;
+        width: 100%;
+        height: 80px;
+    
+        display: flex;
+        justify-content: start;
+    }
+    
+    .link{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        padding-left: 70px;
+        color: var(--color-text-primary);
+        font-size: 15px;
+    
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        text-decoration: none;
+    }
+
+    .link::after {
+        content: none;
+    }
+
+    .hamb_btn{
+        display: block;
+    }
+
+}
+
+
+@media screen and (max-width: 700px) {
+    .cont_nav{
+        width: 100%;
+        height: 55px;
+        justify-content: space-between;
+        padding: 0px 20px;
+    }
+
+
+    .btn_heart{
+        display: none;
+    }
+
+    .link{
+        padding-left: 50px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .cont_nav{
+        width: 100%;
+        justify-content: space-between;
+        padding: 0px 10px;
+    }
+
+    .cont_ul.show  {
+        width: 80%;
+    }
+}

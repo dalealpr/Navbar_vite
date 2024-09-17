@@ -1,0 +1,5 @@
+.cont_app{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
